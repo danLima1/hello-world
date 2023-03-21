@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head> 
-    <style></style>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my first program</title>
+    <title>meu primeiro aplicativo</title>
 </head>
+
 <body>
-a
-    
-   <script>
 
+    <script>
+        /*
+        Esse é o código JavaScript dessa página.
+        */
 
+        var name = 'Joca da Silva'
+        var email = 'joca@silva.com'
+        var birth = '2003-03-18'
+        var cpf = '012.345.678-90'
+        var address = 'Rua do Siri Molhado, 22'
 
-   </script> 
+        // Dados do ususário. Forma moderna!
+        var user = {
+            name : 'alberto da Silva',
+            email : 'albertinho@silva.com',
+            birth : '2003-03-18',
+            cpf : '012.345.678-90',
+            address : 'Rua do Muquirana Molhado, 22',
+            login: function() {
+                prompt('Digite seu nome e e-mail')
+            },
+            firtName: function(name) {
+                alert(name.split(' ')[0])
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>
