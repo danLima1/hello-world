@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meu primeiro aplicativo</title>
+    <title>Aplicativo</title>
 </head>
 
 <body>
@@ -14,23 +14,42 @@
         Esse é o código JavaScript dessa página.
         */
 
-        var name = 'alberto da Silva'
-        var email = 'albertinho@silva.com'
+        // Dados do usuário usando variáveis discretas.
+        var name = 'Joca da Silva'
+        var email = 'joca@silva.com'
         var birth = '2003-03-18'
         var cpf = '012.345.678-90'
-        var address = 'Rua do Muquirana Molhado, 22'
+        var address = 'Rua do Siri Molhado, 22'
 
-        // Dados do ususário. Forma moderna!
+        // Dados do usuário. Forma moderna! Usando notação de objetos.
         var user = {
-            name : 'alberto da Silva',
-            email : 'albertinho@silva.com',
+
+            // Atributos do objeto "user".
+            name : 'Joca da Silva',
+            email : 'joca@silva.com',
             birth : '2003-03-18',
             cpf : '012.345.678-90',
-            address : 'Rua do Muquirana Molhado, 22',
+            address : 'Rua do Siri Molhado, 22',
+
+            // Métodos do objeto "user".
             login: function() {
-                prompt('Digite seu nome e e-mail')
+                
+                // Recebe o e-mail do prompt e armazena.
+                var userEmail = prompt('Digite seu e-mail:')
+
+                // Se o usuário não digitou nada...
+                if(userEmail == "" || userEmail == null) {
+                    alert("Oooops! Você não informou um e-mail...")
+
+                    // Encerra a função retornando false
+                    return "Erro de login"
+                } 
+                
+                    var userPass = prompt('Digite sua senha:')
+
+                                
             },
-            firtName: function(name) {
+            firstName: function() {
                 alert(name.split(' ')[0])
             }
         }
