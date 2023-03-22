@@ -26,31 +26,31 @@
         var user = {
 
             // Atributos do objeto "user".
-            name : 'Joca da Silva',
-            email : 'joca@silva.com',
-            birth : '2003-03-18',
-            cpf : '012.345.678-90',
-            address : 'Rua do Siri Molhado, 22',
+            name: 'Joca da Silva',
+            email: 'joca@silva.com',
+            birth: '2003-03-18',
+            cpf: '012.345.678-90',
+            address: 'Rua do Siri Molhado, 22',
 
             // Métodos do objeto "user".
-            login: function() {
-                
+            login: function () {
+
                 // Recebe o e-mail do prompt e armazena.
                 var userEmail = prompt('Digite seu e-mail:')
 
                 // Se o usuário não digitou nada...
-                if(userEmail == "" || userEmail == null) {
+                if (userEmail == "" || userEmail == null) {
                     alert("Oooops! Você não informou um e-mail...")
 
                     // Encerra a função retornando false
                     return "Erro de login"
-                } 
-                
-                    var userPass = prompt('Digite sua senha:')
+                }
 
-                                
+                var userPass = prompt('Digite sua senha:')
+
+
             },
-            firstName: function() {
+            firstName: function () {
                 alert(name.split(' ')[0])
             }
         }
