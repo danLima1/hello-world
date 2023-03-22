@@ -44,9 +44,16 @@
 
                     // Encerra a função retornando false
                     return "Erro de login"
-                }
+                }else if (userEmail != user.email)
+                alert("ops, email não cadastrado")
 
                 var userPass = prompt('Digite sua senha:')
+                if(userPass == '' || userPass == null){
+                    alert('ops, você não iformou a senha')
+                    //encerra a função retornando false
+                    return false
+                }else if (userPass != user.pass)
+                alert('ops, essa senha está incorreta')
 
 
             },
