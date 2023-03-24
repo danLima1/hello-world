@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ document.write(`<button id="dataAniv" onclick="DataV.Bdate()">Data de nascimento</button>`)         
+ var DataV = {             Bdate: function () {                 
+    var DataRec = prompt ('digite sua data de nascimento aqui')                 
+    var sepData = DataRec.split ('/')                 
+    var datNov = sepData [2] + '-' + sepData [1] + '-' + sepData[0]                
+  document.write (datNov)              }          }
+
+
+    </script>
+</body>
+</html>
