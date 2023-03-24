@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html lang="pt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,7 @@ html lang="pt-br">
             cpf: '012.345.678-90',
             password: '12345',
             address: 'Rua do Siri Molhado, 22',
+            photo: 'https://randomuser.me/api/portraits/men/81.jpg',
 
             // Métodos do objeto "user".
             login: function () {
@@ -38,7 +39,7 @@ html lang="pt-br">
                     alert("Oooops! Você não informou um e-mail...")
                     // Encerra a função retornando false
                     return false
-                } else if(userEmail != user.email) {
+                } else if (userEmail != user.email) {
                     alert('Oooops! E-mail não cadastrado...')
                     return false
                 }
@@ -54,12 +55,15 @@ html lang="pt-br">
                     alert('Oooops! Senha incorreta...')
                     return false
                 }
-
-                document.write('Olá ' + user.name + '!')
+                document.write('<img src="' + user.photo + '">Olá ' + user.name + '!')
                 localStorage.userdata = JSON.stringify({
                     name: user.name,
                     email: user.email
                 })
+                let parts = user.birth.split('-')
+                let bdate = parts[2] + '/' + parts[1] + '/' + parts[0]
+                document.write(' nascido em ' + bdate)
+
 
             },
             firstName: function () {
